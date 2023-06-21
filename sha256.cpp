@@ -50,7 +50,7 @@ void SHA256(uint8_t *Output, uint8_t *InputData, uint32_t InputByteLength) {
 			chunk++) {
 
 		uint8_t MessageSchedule[64 * 4] alignas(4);
-				uint32_t *MessageScheduleWord = (uint32_t*) MessageSchedule;
+				uint32_t *MessageScheduleWord = reinterpret_cast<uint32_t*> (MessageSchedule);
 
 				for (uint8_t i = 0; i < 64; i++) {
 					if (DataIndex < InputByteLength) {
