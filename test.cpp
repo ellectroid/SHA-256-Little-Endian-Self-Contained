@@ -16,7 +16,7 @@ int main() {
 	Data[12] = '!';
 	uint8_t Data_SHA256[32];
 
-	/* The first 32-bit wordd of the real hash of string 'Hello, world!' 13 characters long (no null termination) is: 0x315F5BDB */
+	/* The first 32-bit word of the real hash of string 'Hello, world!' 13 characters long (no null termination) is: 0x315F5BDB */
 
 	SHA256(Data_SHA256, Data, 13);
 	return 0;
