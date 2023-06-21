@@ -9,3 +9,5 @@ Properties:
 - Only byte data access, no memory alignment required
 - All memory, including for constants, is allocated on stack on function call (easily modifiable)
 - 32-bit input data byte length (easily modifiable)
+
+Possible improvement (?): not use uint32_t Hash[8] at all and use the Output itself as a hash buffer.
